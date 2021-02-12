@@ -24,6 +24,30 @@
 	</head>
 	<body class="is-preload">
 
+		<!-- Load Facebook SDK for JavaScript -->
+		<div id="fb-root"></div>
+		<script>
+		  window.fbAsyncInit = function() {
+			FB.init({
+			  xfbml            : true,
+			  version          : 'v9.0'
+			});
+		  };
+  
+		  (function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+  
+		<!-- Your Chat Plugin code -->
+		<div class="fb-customerchat"
+		  attribution="setup_tool"
+		  page_id="103610801770280">
+		</div>
+
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -220,9 +244,9 @@
 						<section>
 							<h2>Servicios</h2>
 							<p>TV Digital FULL HD y 4K, Dispositivos Smart para tu Hogar, Fire Stick TV, TV BOX, Echo Show, Echo Dot.</p>
-							<ul class="actions">
+							<!-- <ul class="actions">
 								<li><a href="generic.html" class="button">Learn More</a></li>
-							</ul>
+							</ul> -->
 						</section>
 						<section id="contacto">
 							<h2>Contáctanos</h2>
